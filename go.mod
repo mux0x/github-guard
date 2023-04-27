@@ -1,4 +1,4 @@
-module main
+module github.com/mux0x/github-guard
 
 go 1.19
 
