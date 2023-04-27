@@ -6,6 +6,7 @@
 ## Features
 
 - Search Github for leaks using dorks.
+- The ability to scan list of targets
 - Store results in a MongoDB database and check periodically for new records.
 - Send notifications to Discord or Telegram when new leaks are found.
 - Support multiple modes of operation:
