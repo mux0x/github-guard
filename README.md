@@ -1,7 +1,8 @@
 # github-guard 🛡️
 
 `github-guard` is a tool for searching Github for sensitive information leaks. It was forked from [gitdorks_go](https://github.com/damit5/gitdorks_go) and enhanced to provide more features.
-
+![alt text](./static/1.png)
+![alt text](./static/2.png)
 ## Features
 
 - Search Github for leaks using dorks.
