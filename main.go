@@ -251,7 +251,7 @@ func menu() {
 	flag.StringVar(&Keyword, "gk", "", "github search keyword")
 	flag.StringVar(&Token, "token", "", "github personal access token")
 	flag.StringVar(&TokenFile, "tf", "", "github personal access token file")
-	flag.StringVar(&Target, "target", "t", "target which search in github")
+	flag.StringVar(&Target, "target", "", "target which search in github")
 	flag.StringVar(&TargetsFile, "tl", "", "list of targets to search for leaks")
 	flag.BoolVar(&NeedWait, "nw", true, "if get github api rate limited, need wait ?")
 	flag.Int64Var(&NeedWaitSecond, "nws", 10, "how many seconds does it wait each time")
