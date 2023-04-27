@@ -93,6 +93,12 @@ github-guard dump --target org:spotify
 
 Make sure to replace `ghp_xxxxxxxx` with your Github personal access token.
 
+## Bonus
+To make it work in the background, maybe in your VPS, try this command, even after closing ssh session it'll be working for you
+```
+nohup github-guard h4ck --target spotify --auto 6 </dev/null >/dev/null 2>&1 &
+```
+
 ## Acknowledgements
 
 - The [gitdorks_go](https://github.com/damit5/gitdorks_go) project, which inspired this tool.
