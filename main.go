@@ -322,9 +322,14 @@ func parseparam() {
 			Dorks = dkresLine
 		}
 	}
-	if flag.Args()[0] == "h4ck" {
-		color.Blue("[+] got %d tokens and %d dorks\n\n", len(Tokens), len(Dorks))
+	if len(flag.Args()) > 0 {
+		if flag.Args()[0] == "h4ck" {
+			color.Blue("[+] got %d tokens and %d dorks\n\n", len(Tokens), len(Dorks))
+		} else {
+			fmt.Println("")
+		}
 	}
+
 }
 
 func getToken() string {
@@ -361,7 +366,10 @@ func readFileLines(filepath string) ([]string, error) {
 
 	return lines, nil
 }
-
+func runAway() {
+	flag.Usage()
+	os.Exit(0)
+}
 func main() {
 	modes := []string{"h4ck", "dump", "list"}
 	menu()
@@ -370,12 +378,13 @@ func main() {
 	Client = http.Client{}
 	args := flag.Args()
 
-	if flag.NFlag() == 0 && args[0] != "list" || !StringInSlice(flag.Args()[0], modes) {
-		if !StringInSlice(flag.Args()[0], modes) {
-			color.Red("Unrecognized mode")
+	if len(args) < 1 {
+		runAway()
+	} else if len(args) > 0 {
+		if !StringInSlice(args[0], modes) {
+			color.Red("Uncrecognized mode")
+			runAway()
 		}
-		flag.Usage()
-		os.Exit(0)
 	}
 
 	if args[0] == "list" {
