@@ -44,7 +44,7 @@ Note: If you have installed MongoDB using a different method or version, the abo
 To install `github-guard`, run:
 
 ```
-go install -v github.com/mux0x/github-guard@lates
+go install -v github.com/mux0x/github-guard@latest
 ```
 
 Make sure you have Go installed on your machine.
